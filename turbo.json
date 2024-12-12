@@ -1,9 +1,20 @@
 {
+    "$schema": "https://turborepo.org/schema.json",
     "pipeline": {
       "build": {
-        "outputs": ["dist/**"]
+        "dependsOn": ["^build"]
       },
-      "dev": {}
+      "dev": {
+        "dependsOn": ["^build"],
+        "outputs": []
+      }
+    },
+    "projects": {
+      "frontend": {
+        "path": "apps/frontend"
+      },
+      "backend": {
+        "path": "apps/backend"
+      }
     }
   }
-  
