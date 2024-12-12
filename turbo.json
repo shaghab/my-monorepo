@@ -11,10 +11,12 @@
     },
     "projects": {
       "frontend": {
-        "path": "apps/frontend"
+        "path": "apps/frontend",
+        "dependsOn": []
       },
       "backend": {
-        "path": "apps/backend"
+        "path": "apps/backend",
+        "dependsOn": []
       }
     }
   }
